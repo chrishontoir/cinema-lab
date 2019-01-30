@@ -8,6 +8,12 @@ Cinema.prototype.filmTitles = function () {
   });
 };
 
+Cinema.prototype.filmFindByGenre = function (genre) {
+  return this.films.filter((film) => {
+    return film.genre === genre;
+  });
+};
+
 Cinema.prototype.filmFindByTitle = function (title) {
   return this.films.find((film) => {
     return film.title === title;
